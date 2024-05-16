@@ -68,28 +68,26 @@ body {
 .sticky {
   position: sticky;
   top: 0;
-  border: 2px solid red;
-  padding: 10px;
+  border: 2px solid $attackRed;
 }
 .main {
   flex: 1 0 0;
-  border: 10px solid gold;
+  border: 10px solid $color-tertiary;
   padding: 10px;
 }
 
 .lside,
 .rside {
-  min-height: 100vh;
-  background-repeat: no-repeat;
-  background-size: contain;
   .pokemonSideImage {
     min-height: 100vh;
     background-repeat: no-repeat;
     background-size: contain;
+    background-position: center;
   }
   p {
     color: $color-black;
     font-family: 'Pokemon Solid', sans-serif;
+    // -webkit-text-stroke: 1px $color-gold;
     font-size: 32px;
     padding-top: 12px;
     margin-left: auto;
@@ -97,6 +95,7 @@ body {
     left: 0;
     right: 0;
     text-align: center;
+    @include stroke(1, $color-gold);
   }
 }
 
