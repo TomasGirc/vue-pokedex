@@ -1,9 +1,14 @@
 <template>
   <div v-if="loaded">
-    <img v-if="pokemon.sprites" :src="`${pokemon.sprites.front_default}`" />
-    <h3>{{ pokemon.name }}</h3>
+    <img
+      v-if="pokemon.sprites"
+      :src="`${pokemon.sprites.front_default}`"
+      alt=""
+      class="h-100 w-100 rounded-ful"
+    />
+    <h3 class="text-sm font-medium text-gray-900">{{ pokemon.name }}</h3>
     <div v-for="stats in pokemon.stats" :key="stats.stat.name">
-      <p>{{ stats.stat.name }} : {{ stats.base_stat }}</p>
+      <p class="text-sm text-gray-500">{{ stats.stat.name }} : {{ stats.base_stat }}</p>
     </div>
     <button @click="selectAttacker(pokemon)" class="attacker">Attacker</button>
     <button @click="selectDefender(pokemon)" class="defender">Defender</button>
