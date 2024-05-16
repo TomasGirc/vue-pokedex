@@ -12,12 +12,15 @@
 
     <button @click="pageForward(false)">Back</button>
     <button @click="pageForward(true)">Next</button>
-    <div v-for="pokemon in pokedex.results" :key="pokemon.name">
-      <PokemonCard
-        :name="pokemon.name"
-        @selectedAttacker="pokemonAttacker"
-        @selectedDefender="pokemonDefender"
-      />
+
+    <div class="flex flex-wrap">
+      <div v-for="pokemon in pokedex.results" :key="pokemon.name" class="w-1/2">
+        <PokemonCard
+          :name="pokemon.name"
+          @selectedAttacker="pokemonAttacker"
+          @selectedDefender="pokemonDefender"
+        />
+      </div>
     </div>
   </div>
 </template>
@@ -58,8 +61,8 @@ const handleInput = (data: string) => {
 
 const pageForward = (forward: boolean) => {
   forward
-    ? ((offset.value += 9), pokemonFetch())
-    : offset.value >= 9 && ((offset.value -= 9), pokemonFetch())
+    ? ((offset.value += 10), pokemonFetch())
+    : offset.value >= 10 && ((offset.value -= 10), pokemonFetch())
 }
 
 onMounted(() => {
