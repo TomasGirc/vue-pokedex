@@ -6,7 +6,7 @@
           <span class="sr-only">Your Company</span>
           <img
             class="h-8 w-auto"
-            src="https://tailwindui.com/img/logos/mark.svg?color=indigo&shade=600"
+            src="https://i.pinimg.com/originals/90/6e/dc/906edc8b6f1b7089442ce99ca0b5a7a2.jpg"
             alt=""
           />
         </a>
