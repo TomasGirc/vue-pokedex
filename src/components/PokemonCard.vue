@@ -10,6 +10,9 @@
     <div v-for="stats in pokemon.stats" :key="stats.stat.name">
       <p class="text-sm text-gray-500">{{ stats.stat.name }} : {{ stats.base_stat }}</p>
     </div>
+    <div class="text-sm font-medium text-gray-900">
+      <p class="text-sm text-gray-500">ID: {{ pokemon.id }}</p>
+    </div>
     <button @click="selectAttacker(pokemon)" class="attacker">Attacker</button>
     <button @click="selectDefender(pokemon)" class="defender">Defender</button>
   </div>

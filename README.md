@@ -62,3 +62,5 @@ npm run test:e2e -- --debug
 ```sh
 npm run lint
 ```
+
+Card inspiration - https://codepen.io/heatherketten/pen/RMMzWe
